@@ -133,7 +133,7 @@ def current(zipcode: Optional[str]) -> None:
                 raise click.ClickException(f"Could not find location for zipcode {zipcode}.")
             weather = get_current_weather(zipcode)
             click.echo(
-                f"It is currently {weather['temperature_f']}ºF, and {weather['condition']} in "
+                f"It is currently {weather['temperature_f']}°F, and {weather['condition']} in "
                 f"{location['city']}, {location['state']}."
             )
             return
@@ -145,7 +145,7 @@ def current(zipcode: Optional[str]) -> None:
         query = location.get("zipcode") or f"{location['city']},{location['state']}"
         weather = get_current_weather(query)
         click.echo(
-            f"It is currently {weather['temperature_f']}ºF, and {weather['condition']} in "
+            f"It is currently {weather['temperature_f']}°F, and {weather['condition']} in "
             f"{location['city']}, {location['state']}."
         )
     except WeatherError as exc:
