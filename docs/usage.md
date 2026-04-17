@@ -112,4 +112,4 @@ The app provides informative error messages when something goes wrong:
 
 - All temperatures are displayed in Fahrenheit (imperial units).
 - The app uses free, publicly available APIs that do not require API keys or registration.
-- If no `--zipcode` is supplied, the app relies on IP-based geolocation to determine your current location, which may not always be precise (for example, when using a VPN).
+- If no `--zipcode` is supplied, the app attempts to determine your current location automatically, which may not always be precise.
